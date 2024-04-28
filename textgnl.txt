@@ -1,0 +1,6 @@
+hola
+es un archivo de 
+prueba en el 
+que vamos a probar 
+el salto de linea 
+para hacer el gnl
