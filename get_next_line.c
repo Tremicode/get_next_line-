@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:43:01 by ctremino          #+#    #+#             */
-/*   Updated: 2024/04/28 12:59:20 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/05/01 15:57:40 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ char	*get_next_line(int fd)
 
 size_t	ft_strlen(const char *str)
 {
-	size_t	i;
+	size_t	len;
 
-	i = 0;
 	if (!str)
 		return (0);
-	while (str[i])
-		i++;
-	return (i);
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
 }
 
 char	*ft_strjoin(char *s1, char *s2)
@@ -64,15 +64,15 @@ char	*ft_strjoin(char *s1, char *s2)
 }
 /*#include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	int	fd = open("textgnl.txt", O_RDONLY);
 	char *line;
 
- 	if (fd == -1)
+	if (fd == -1)
 	{
 	printf("Error opening file\n");
-	return 1;
+	return (1);
  }
 	line = get_next_line(fd);
 	printf("%s\n",line);
@@ -83,5 +83,5 @@ int main(void)
 	}
 	close(fd);
 	system("leaks -q a.out");
-	return(0);	
+	return(0);
 }*/
