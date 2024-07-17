@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 14:43:01 by ctremino          #+#    #+#             */
-/*   Updated: 2024/05/01 15:57:40 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/07/17 13:22:23 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*get_next_line(int fd)
 	char		*line_file;
 
 	if (BUFFER_SIZE <= 0 || fd < 0)
-		return (NULL);
+		return ((NULL));
 	data_store = ft_fd_reader(fd, data_store);
 	if (!data_store)
 		return (NULL);
@@ -64,24 +64,27 @@ char	*ft_strjoin(char *s1, char *s2)
 }
 /*#include <stdio.h>
 
-int	main(void)
-{
-	int	fd = open("textgnl.txt", O_RDONLY);
-	char *line;
+ int	main(void)
+ {
+ 	int	fd = open("text_1.txt", O_RDONLY); // = 0;
+ 	char *line;
 
 	if (fd == -1)
-	{
-	printf("Error opening file\n");
-	return (1);
- }
-	line = get_next_line(fd);
-	printf("%s\n",line);
-	while (line)
-	{	printf("%s\n",line);
-		free(line);
+ 	{
+ 	printf("Error opening file\n");
+ 	return (1);
+  }
+ 	line = get_next_line(fd);
+ 	printf("%s\n",line);
+ 	free(line);
+ 	//int i = 0;
+ 	while (line) //i++ < 50
+ 	{
 		line = get_next_line(fd);
-	}
-	close(fd);
-	system("leaks -q a.out");
-	return(0);
-}*/
+		printf("%s",line);
+ 		free(line); 
+ 	}
+ 	close(fd);
+
+ 	return(0);
+ }*/

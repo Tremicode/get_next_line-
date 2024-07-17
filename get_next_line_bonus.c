@@ -6,7 +6,7 @@
 /*   By: ctremino <ctremino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 13:34:08 by ctremino          #+#    #+#             */
-/*   Updated: 2024/05/01 15:37:10 by ctremino         ###   ########.fr       */
+/*   Updated: 2024/07/17 13:30:20 by ctremino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,28 +63,23 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 /*#include <stdio.h>
-void	leaks_cheker()
-{
-	system("leaks -q a.out");
-}
+
 int main(void)
 {
-	int fd1 = open ("textgnl.txt", O_RDONLY);
-	int fd2 = open ("text3.txt", O_RDONLY);
-	int fd3 = open ("txt2gnl.txt", O_RDONLY);
+	int fd1 = open ("text_1.txt", O_RDONLY);
+	int fd2 = open ("text_2.txt", O_RDONLY);
+	int fd3 = open ("text_3.txt", O_RDONLY);
 	
 	char *line_file1;
 	char *line_file2;
 	char *line_file3;
 
-	atexit(leaks_cheker);
-
 	line_file1 = get_next_line (fd1);
-	printf(" f1 %s\n", line_file1);
+	printf("f1 %s\n", line_file1);
 	free(line_file1);
 	
 	line_file2 = get_next_line (fd2);
-	printf(" f2 %s\n", line_file2);
+	printf("f2 %s\n", line_file2);
 	free(line_file2);
 	
 	line_file3 = get_next_line (fd3);
